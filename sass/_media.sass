@@ -14,7 +14,20 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+
+	//components
+	.hide-less-md
+		display: none
+
+	//common style
+	.main-section
+		.main-block-bg-img
+			max-width: 375px
+			align-items: center
+			top: 0
+			margin-top: 50px
+
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -37,7 +50,18 @@
 		animation: none !important
 
 
+
+
 /* Extra Small Devices, Phones */
+
+@media only screen and (max-width : 575px)
+
+	//common style
+
+	.main-section
+		&__main-title
+			text-align: left
+
 @media only screen and (max-width : 480px)
 	/**/
 
@@ -61,17 +85,18 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+	.hide-more-md
+		display: none
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
+	.container
+		max-width: 1310px
 	/**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	.container
-		max-width: 1310px
 	/**/
 

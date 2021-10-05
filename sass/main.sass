@@ -30,11 +30,14 @@ body textarea:required:valid
 //Custom Styles Here
 
 body
+	font-size: 18px
 	margin: 0
 
 @import "settings-components"
 
 header
+	position: absolute
+	width: 100%
 	padding: 40px 0
 	.wrapper-content
 		display: flex
@@ -74,7 +77,7 @@ header
 		align-items: center
 
 .main-section
-	padding-top: 70px
+	padding-top: 186px
 	.wrapper-content
 		display: flex
 		flex-direction: column
@@ -83,10 +86,219 @@ header
 		text-align: center
 		color: $black-color
 		margin-bottom: 24px
+		max-width: 860px
 	&__description
 		max-width: 630px
 		margin-bottom: 40px
+	.main-block-bg-img
+		display: flex
+		flex-direction: row
+		justify-content: center
+		width: 100%
+		position: relative
+		top: -5px
 
+
+.use-it
+	padding-top: 80px
+	.standard-description
+		max-width: 720px
+		margin-bottom: 70px
+.list-blocks-section
+	padding-bottom: 80px
+	position: relative
+	&::after
+		content: " "
+		position: absolute
+		top: 50px
+		background-image: url("../img/list-block-snippet-img.png")
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		width: 100%
+		min-height: 150px
+	.list-blocks
+		position: relative
+		z-index: 20
+		width: 100%
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+		justify-content: space-between
+		.block
+			width: 33.33%
+			max-width: 360px
+			.block-body
+				width: 100%
+				max-width: 360px
+				display: flex
+				flex-direction: column
+				align-items: center
+				img
+					max-width: 260px
+				.list-title
+					margin: 33px 0 12px 0
+				.list-description
+					text-align: center
+
+.voucher-section
+	padding: 80px 0
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		background-image: url("../img/voucher-left-snippet.png")
+		background-position: left center
+		background-repeat: no-repeat
+		background-size: contain
+		width: 35%
+		height: 190px
+		top: 140px
+	&::after
+		content: ''
+		position: absolute
+		top: 155px
+		right: 0
+		background-image: url("../img/voucher-right-snippet.png")
+		background-repeat: no-repeat
+		background-position: right center
+		background-size: contain
+		width: 35%
+		height: 200px
+	.wrapper-content-column
+		max-width: 820px
+	.block-logo
+		max-width: 180px
+		margin-bottom: 40px
+	.button
+		margin-top: 40px
+
+.pay-section
+	padding: 80px 0 160px
+	.wrapper-main-content
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	.left-side
+		min-width: 660px
+		align-items: flex-start
+		justify-content: center
+		.section__title
+			margin-bottom: 40px
+	.list-wrapper
+		width: 100%
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		.list
+			&:first-of-type
+				margin-right: 30px
+			li
+				display: flex
+				flex-direction: row
+				align-items: center
+				margin-bottom: 24px
+				&:last-of-type
+					margin-bottom: 0
+				.svg-icon
+					position: absolute
+					display: flex
+					flex-direction: row
+					align-items: center
+					justify-content: center
+					width: 24px
+					height: 24px
+				.standard-description
+					padding-left: 40px
+	.right-side
+		.img-block
+			width: 530px
+
+.pay-system
+	padding: 340px 0 350px
+	background-image: url("../img/pay-system-bg.png")
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	.wrapper-content-column
+		max-width: 590px
+
+.pay-online
+	padding: 160px 0 152px
+	.tile-block
+		padding: 70px 56px
+		background-color: #F6F5FF
+		border-radius: 4px
+		position: relative
+		&::after
+			content: ""
+			top: 0
+			right: 0
+			position: absolute
+			background-image: url("../img/pay-online-block-bg-img.png")
+			background-size: cover
+			background-repeat: no-repeat
+			width: 100%
+			max-width: 510px
+			height: 100%
+	.wrapper-content-column
+		align-items: flex-start
+		max-width: 650px
+		.standard-description
+			text-align: left
+			margin-bottom: 24px
+
+footer
+	padding-bottom: 90px
+	.logo
+		display: flex
+		max-width: 92px
+	.wrapper-content
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	.left-side
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: space-between
+	.right-side
+		display: flex
+		flex-direction: row
+		align-items: flex-start
+	.menu-list
+		font-family: "NotoSans SemiBold", sans-serif
+		font-weight: 600
+		color: $black-color
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		min-width: 180px
+		margin-left: 32px
+		&.standard-description
+			margin-top: 0
+		li
+			display: flex
+			text-align: left
+			margin-bottom: 4px
+			&:first-of-type
+				margin-top: 16px
+			a
+				font-family: "NotoSans Regular", sans-serif
+				font-weight: 400
+				color: $dark-gray
+				font-size: 14px
+				line-height: 24px
+				opacity: 1
+				transition: all .5s
+				&:hover
+					opacity: .7
+					transition: all .5s
+				&.color-link
+					font-family: "NotoSans Medium", sans-serif
+					font-weight: 500
+					color: $violet
 
 
 //ALWAYS END
