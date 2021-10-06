@@ -75,6 +75,47 @@ header
 		display: flex
 		flex-direction: row
 		align-items: center
+	.navi-hamburger
+		position: relative
+		display: none
+		flex-direction: column
+		justify-content: space-between
+		margin-left: 20px
+		//top: 60px
+		z-index: 3000
+		//right: 15px
+		float: right
+		height: 38px
+		width: 38px
+		cursor: pointer
+		padding: 10px
+		background-color: transparent
+		transition: all .5s
+		&.open
+			span
+				left: -2px
+				width: 21px
+				&.top
+					top: -2px
+				&.bottom
+					top: 0px
+			span:first-child
+				transform: rotate(45deg) translate(5.4px, 8px)
+				left: .5px
+			span:nth-child(2)
+				width: 0
+				opacity: 0
+			span:last-child
+				transform: rotate(-45deg) translate(7.4px, -5.4px)
+		span
+			position: relative
+			display: block
+			top: 0px
+			height: 2px
+			width: 100%
+			border-radius: 4px
+			transition: all .25s
+			background-color: $black-color
 
 .main-section
 	padding-top: 186px
@@ -98,6 +139,111 @@ header
 		position: relative
 		top: -5px
 
+
+//for mob menu
+.nav-mobile
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	position: fixed
+	top: 102px
+	z-index: 2500
+	width: 100%
+	bottom: 0
+	height: 100%
+	left: -100%
+	background-color: #ffffff
+	transition-property: left
+	transition-duration: .3s
+	transition-timing-function: ease-in
+	overflow: auto
+	.top-header
+		padding-left: 15px
+		padding-right: 15px
+	&.open
+		left: 0
+	#collapse
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		padding-bottom: 100px
+		ul
+			border-top: 1px solid #d1d7db
+			margin: 0
+			padding: 0
+		li > ul
+			display: none
+		.custom-search
+			padding: 20px
+		li.first-item-menu
+			border-bottom: 1px solid #d1d7db
+			&:last-of-type
+				.link
+					border-bottom: 1px solid transparent
+			&.open
+				i.fa-chevron-right
+					transform: rotate(90deg)
+					transition: transform .15s ease-in-out,-webkit-transform .15s ease-in-out
+			.link
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				align-items: center
+				padding: 20px 24px
+				cursor: pointer
+				&.active
+					background-color: $violet
+					span
+						color: #ffffff
+				&:hover
+					transition: background-color .2s
+					background-color: $violet
+					span
+						transition: all .5s
+						color: #ffffff
+						opacity: .8
+				&:active
+					background-color: $violet
+				&:active
+					span
+				//color: $black-red
+				span,a
+					//text-transform: uppercase
+					font-family: 'NotoSans Medium', sans-serif
+					font-weight: 500
+					width: 100%
+					display: flex
+					font-size: 14px
+					line-height: 16px
+					color: $dark-gray
+				i.fa-chevron-right
+					transition: transform .15s ease-in-out,-webkit-transform .15s ease-in-out
+					//color: $orange
+					font-size: 15px
+			ul.submenu
+				li
+					a
+						display: flex
+						padding: 20px 40px
+						border-bottom: 1px solid #d1d7db
+						background-color: #f5f5f5
+						font-size: 15px
+						line-height: 16px
+		.button-wrapper
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			padding-top: 20px
+			.button
+				width: 100%
+				max-width: 360px
+				//max-width: 50%
+				margin: 0px 24px 15px
+				&.b-line
+					border: 1px solid $dark-gray
+
+
+//end of mobile menu style
 
 .use-it
 	padding-top: 80px
@@ -128,9 +274,10 @@ header
 		.block
 			width: 33.33%
 			max-width: 360px
+			padding: 0 15px
 			.block-body
 				width: 100%
-				max-width: 360px
+				max-width: 390px
 				display: flex
 				flex-direction: column
 				align-items: center
@@ -180,10 +327,12 @@ header
 		flex-direction: row
 		justify-content: space-between
 	.left-side
-		min-width: 660px
+		width: 100%
+		max-width: 660px
 		align-items: flex-start
 		justify-content: center
 		.section__title
+			text-align: left
 			margin-bottom: 40px
 	.list-wrapper
 		width: 100%
@@ -211,17 +360,33 @@ header
 				.standard-description
 					padding-left: 40px
 	.right-side
-		.img-block
-			width: 530px
+		width: 530px
+
+
 
 .pay-system
-	padding: 340px 0 350px
-	background-image: url("../img/pay-system-bg.png")
-	background-size: cover
-	background-position: center
-	background-repeat: no-repeat
+	display: flex
+	flex-direction: column
+	align-items: center
+	overflow: hidden
+	//padding: 340px 0 350px
+	//background-image: url("../img/pay-system-bg.png")
+	//background-size: cover
+	//background-position: center
+	//background-repeat: no-repeat
+	position: relative
+	background-color: #F9FDFF
+	&::before
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 58.85%, #FFFFFF 100%)
 	.wrapper-content-column
+		margin: 50px 0
 		max-width: 590px
+	img
+		display: block
 
 .pay-online
 	padding: 160px 0 152px
@@ -242,11 +407,15 @@ header
 			max-width: 510px
 			height: 100%
 	.wrapper-content-column
+		position: relative
+		z-index: 20
 		align-items: flex-start
 		max-width: 650px
 		.standard-description
 			text-align: left
 			margin-bottom: 24px
+	.section__title
+		text-align: left
 
 footer
 	padding-bottom: 90px

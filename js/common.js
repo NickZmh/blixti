@@ -7,22 +7,18 @@ $(function() {
 		});
 	};
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
+	$('.navi-hamburger').click(function (event) {
+		$('.nav-mobile').toggleClass('open');
+		$(this).toggleClass('open');
+		$('.admittance-desk').slideToggle('slow');
+		event.stopPropagation();
+		if($('.nav-mobile').hasClass('open')) {
+			$('html').css('overflow','hidden');
+			// $('#main-header').addClass('resize');
+		}else {
+			// $('#main-header').removeClass('resize');
+			$('html').css('overflow', 'auto');
+		}
 	});
 
 });

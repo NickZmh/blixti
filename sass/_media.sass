@@ -4,12 +4,132 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	//common style
+	.voucher-section
+		&::before
+			left: -110px
+		&::after
+			right: -90px
 
+	.pay-section
+		.right-side
+			min-width: 480px
+
+@media only screen and (max-width : 1100px)
+	//common style
+	.list-blocks-section
+		&::after
+			width: calc(100% + 200px)
+			left: -80px
+			min-height: 105px
+	.pay-section
+		.list-wrapper
+			.list
+				&:first-of-type
+					margin-right: 20px
+		.right-side
+			min-width: 410px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+
+
+	//common style
+
+	.main-section
+		.main-block-bg-img
+			width: calc(100% + 50px)
+
+	.list-blocks-section
+		&::after
+			width: 0
+
+		.list-blocks
+			flex-direction: column
+			align-items: center
+			.block
+				width: 100%
+				max-width: 400px
+				margin-bottom: 56px
+				&:last-of-type
+					margin-bottom: 0
+				.block-body
+					img
+						max-width: 280px
+
+	.use-it
+		.wrapper-content-column
+			width: 100%
+			max-width: 640px
+	.voucher-section
+		&::before
+			width: 120px
+			height: 430px
+			left: 0
+			top: 105px
+			background-image: url("../img/voucher-left-snippet-mobile.png")
+		&::after
+			//width: 320px
+			right: 0
+			width: 110px
+			height: 420px
+			background-image: url("../img/voucher-right-snippet-mobile.png")
+
+	.pay-section
+		padding: 60px 0 160px
+		.wrapper-main-content
+			flex-direction: column
+			align-items: center
+		.list-wrapper
+			max-width: 580px
+		.left-side
+			order: 2
+			align-items: center
+			max-width: 100%
+			.section__title
+				text-align: center
+		.right-side
+			order: 1
+			margin-bottom: 26px
+			width: 100%
+			max-width: 480px
+			min-width: initial
+
+	.pay-system
+		.top-img,
+		.bottom-img
+			width: 900px
+
+	.pay-online
+		.tile-block
+			&::after
+				background-image: url("../img/pay-online-block-bg-img-mobile.png")
+
+	footer
+		.wrapper-content
+			flex-wrap: wrap
+		.left-side
+			width: 33.33%
+			.copyright
+				display: none
+		.menu-list
+			width: 33.34%
+			min-width: initial
+			margin-left: 0
+			margin-bottom: 30px
+		.copyright
+			&.mob
+				width: 100%
+
+@media only screen and (max-width : 900px)
+
+	//common style
+
+	header
+		.right-side
+			display: none
+		.navi-hamburger
+			display: flex
 
 
 /* Small Devices, Tablets */
@@ -27,27 +147,48 @@
 			top: 0
 			margin-top: 50px
 
+	.pay-section
+		.list-wrapper
+			flex-direction: column
+			max-width: 286px
+			.list
+				margin-bottom: 24px
+				margin-right: 0!important
+				&:last-of-type
+					margin-bottom: 0
+	.pay-online
+		.tile-block
+			padding: 80px 35px 100px
+			&::after
+				height: 240px
+				background-size: contain
+				background-position: right center
+				top: initial
+				right: 0
+				bottom: 0
 
-	/*Disable Animation on Mobile Devices*/
-	.animated
-		/*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+
+
+	///*Disable Animation on Mobile Devices*/
+	//.animated
+	//	/*CSS transitions*/
+	//	-o-transition-property: none !important
+	//	-moz-transition-property: none !important
+	//	-ms-transition-property: none !important
+	//	-webkit-transition-property: none !important
+	//	transition-property: none !important
+	//	/*CSS transforms*/
+	//	-o-transform: none !important
+	//	-moz-transform: none !important
+	//	-ms-transform: none !important
+	//	-webkit-transform: none !important
+	//	transform: none !important
+	//	/*CSS animations*/
+	//	-webkit-animation: none !important
+	//	-moz-animation: none !important
+	//	-o-animation: none !important
+	//	-ms-animation: none !important
+	//	animation: none !important
 
 
 
@@ -56,11 +197,84 @@
 
 @media only screen and (max-width : 575px)
 
-	//common style
+	//settings
 
+	.text-left-less-sm
+		text-align: left
+
+	//components
+
+	.button
+		width: 100%
+		max-width: 326px
+
+	.container,
+	.container-fluid
+		padding: 0 24px
+
+	//common style
+	header
+		padding: 40px 0 24px
 	.main-section
+		padding-top: 110px
 		&__main-title
 			text-align: left
+		&__description
+			text-align: left
+		.main-block-bg-img
+			width: calc(100% + 44px)
+
+	.use-it
+		padding-top: 46px
+		.standard-description
+			margin-bottom: 56px
+	.list-blocks-section
+		padding-bottom: 60px
+		.list-blocks
+			.block
+				padding: 0
+				.block-body
+					img
+						max-width: 260px
+	.voucher-section
+		padding: 60px 0
+		&::before
+			top: 84px
+		&::after
+			top: 135px
+
+	.pay-section
+		padding: 40px 0 120px
+		.left-side
+			.section__title
+				text-align: left
+		.list-wrapper
+			max-width: 100%
+		.right-side
+			width: calc(100% + 48px)
+
+	.pay-system
+		&::before
+			background: radial-gradient(75% 50% at 50% 50%, rgba(255, 255, 255, 0) 58.85%, #FFFFFF 100%)
+
+	.pay-online
+		padding: 120px 0 120px
+		.tile-block
+			box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31)
+			border-radius: 4px
+			padding: 80px 24px 100px
+
+	footer
+		padding-bottom: 80px
+		.wrapper-content
+			flex-wrap: nowrap
+			flex-direction: column
+		.left-side
+			margin-bottom: 40px
+		.menu-list
+			width: 100%
+			&:last-of-type
+				margin-bottom: 40px
 
 @media only screen and (max-width : 480px)
 	/**/

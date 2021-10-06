@@ -19,7 +19,8 @@ img {
 .button {
   display: inline-flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
   .button.standard {
     position: relative;
     z-index: 20;
@@ -70,7 +71,8 @@ img {
   line-height: 48px;
   letter-spacing: -0.02em;
   color: #192b3b;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  text-align: center; }
 
 .section__middle-title {
   font-family: "NotoSans SemiBold", sans-serif;
