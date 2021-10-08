@@ -689,6 +689,8 @@ header {
   .contact-form .content-block {
     max-width: 450px;
     align-items: flex-start; }
+    .contact-form .content-block .section__title {
+      text-align: left; }
     .contact-form .content-block .standard-description {
       text-align: left;
       margin-bottom: 24px; }
@@ -850,6 +852,12 @@ header {
         min-height: 120px; }
     .contact-form .form button {
       margin-top: 20px; }
+
+.contact {
+  padding-top: 150px !important; }
+  .contact .content-block .main-title {
+    margin-bottom: 24px;
+    text-align: left; }
 
 footer {
   padding-top: 160px;
@@ -1032,7 +1040,7 @@ footer {
     .principles .tiles .tile {
       width: 100%; }
   .contact-form .content-block {
-    max-width: 300px; }
+    max-width: 315px; }
   footer .wrapper-content {
     flex-wrap: wrap; }
   footer .left-side {
@@ -1193,6 +1201,8 @@ footer {
     padding-top: 0; }
     .contact-form .form button {
       max-width: 100%; }
+  .contact {
+    padding-top: 130px !important; }
   footer {
     padding-top: 120px;
     padding-bottom: 80px; }
