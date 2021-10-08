@@ -7,7 +7,7 @@ ul {
   ul li {
     list-style-type: none; }
 
-h1, h3, h4, h4, h5, h6, p {
+h1, h2, h3, h4, h4, h5, h6, p {
   margin: 0; }
 
 img {
@@ -16,11 +16,16 @@ img {
 .svg-icon {
   display: flex; }
 
+button {
+  outline: none;
+  border: none; }
+
 .button {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  cursor: pointer; }
   .button.standard {
     position: relative;
     z-index: 20;
@@ -41,6 +46,23 @@ img {
   .button.violet {
     background-color: #7367fe;
     color: white; }
+
+.color-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px; }
+  .color-tile.red {
+    background-color: #FEE2E2; }
+  .color-tile.green {
+    background-color: #D1FAE5; }
+  .color-tile.yellow {
+    background-color: #FFEDD5; }
+  .color-tile.violet {
+    background-color: #E3E1FF; }
+  .color-tile.beige {
+    background-color: #DFF3FD; }
 
 .wrapper-content-column {
   display: flex;

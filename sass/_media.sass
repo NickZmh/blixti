@@ -3,6 +3,18 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1340px)
+	//common style
+
+	.principles
+		.tiles
+			margin-left: -15px
+			margin-right: -15px
+			.tile
+				padding: 0 15px
+				margin-top: 30px
+
 @media only screen and (max-width : 1200px)
 	//common style
 	.voucher-section
@@ -14,6 +26,11 @@
 	.pay-section
 		.right-side
 			min-width: 480px
+
+	.main-section-color-line
+		&.business
+			background-position-x: -260px
+
 
 @media only screen and (max-width : 1100px)
 	//common style
@@ -30,6 +47,12 @@
 		.right-side
 			min-width: 410px
 
+	.main-section-color-line
+		&::before
+			width: 22%
+		&::after
+			width: 22%
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
@@ -39,6 +62,24 @@
 	.main-section
 		.main-block-bg-img
 			width: calc(100% + 50px)
+
+	.main-section-color-line
+		&::before
+			width: 90px
+			height: 320px!important
+			top: 170px
+			background-image: url("../img/main-color-section-left-snippet-img.png")!important
+		&::after
+			width: 90px
+			height: 320px
+			top: 160px
+			background-image: url("../img/main-color-section-right-snippet-img.png")!important
+		&.security
+			.wrapper-content
+				max-width: 100%
+		&.business
+			background-position-x: -500px
+
 
 	.list-blocks-section
 		&::after
@@ -105,6 +146,39 @@
 			&::after
 				background-image: url("../img/pay-online-block-bg-img-mobile.png")
 
+	.benefits
+		.text-section
+			max-width: 620px
+
+		.text-block
+			margin-bottom: 32px
+		.text-second-line
+			display: flex
+			flex-direction: column-reverse
+		.phantom-block
+			display: none
+		.stick-img
+			width: 100%
+			margin: 0 auto 100px auto
+			display: flex
+			flex-direction: column-reverse
+			.stick-img-block
+				padding: 0 15px
+				width: 100%
+				position: relative
+				img
+					width: 100%
+
+	.principles
+		.tiles
+			margin-top: 42px
+			.tile
+				width: 100%
+
+	.contact-form
+		.content-block
+			max-width: 300px
+
 	footer
 		.wrapper-content
 			flex-wrap: wrap
@@ -147,6 +221,12 @@
 			top: 0
 			margin-top: 50px
 
+	.main-section-color-line
+		&::before
+			top: 215px
+		&::after
+			top: 200px
+
 	.pay-section
 		.list-wrapper
 			flex-direction: column
@@ -166,6 +246,20 @@
 				top: initial
 				right: 0
 				bottom: 0
+
+	.benefits
+		.stick-img
+			align-items: center
+			.stick-img-block
+				max-width: 540px
+
+	.contact-form
+		padding-top: 40px
+		.content-block
+			max-width: 100%
+			margin-bottom: 56px
+			.standard-description
+				max-width: 340px
 
 
 
@@ -202,6 +296,9 @@
 	.text-left-less-sm
 		text-align: left
 
+	.hide-less-sm
+		display: none!important
+
 	//components
 
 	.button
@@ -223,6 +320,15 @@
 			text-align: left
 		.main-block-bg-img
 			width: calc(100% + 44px)
+
+	.main-section-color-line
+		background-position-x: -170px
+		&.security
+			padding-bottom: 110px
+			background-position-x: -850px
+		&.business
+			padding-bottom: 120px
+			background-position-x: -856px
 
 	.use-it
 		padding-top: 46px
@@ -258,13 +364,57 @@
 			background: radial-gradient(75% 50% at 50% 50%, rgba(255, 255, 255, 0) 58.85%, #FFFFFF 100%)
 
 	.pay-online
-		padding: 120px 0 120px
+		padding: 120px 0 0px
 		.tile-block
 			box-shadow: 0px 1px 1px rgba(9, 30, 66, 0.25), 0px 0px 1px rgba(9, 30, 66, 0.31)
 			border-radius: 4px
 			padding: 80px 24px 100px
 
+	.benefits
+		padding-top: 10px
+		.section__title
+			margin-bottom: 56px
+		.text-section
+			margin-bottom: 56px
+			&:last-of-type
+				margin-bottom: 56px
+		.img-second-line,
+		.img-third-line
+			img
+				width: 100%
+		.stick-img
+			margin: 0 auto 56px auto
+			.stick-img-block
+				padding: 0
+				max-width: 100%
+				height: initial
+
+	.principles
+		.wrapper-content-column
+			align-items: center
+		.standard-description
+			max-width: 320px
+			text-align: center
+		.tiles
+			margin-top: 40px
+			.tile
+				margin-top: 16px
+				.tile-body
+					padding: 24px
+					flex-direction: column
+					align-items: flex-start
+					.color-tile
+						margin-bottom: 24px
+
+	.contact-form
+		padding-top: 0
+		.form
+			button
+				max-width: 100%
+
+
 	footer
+		padding-top: 120px
 		padding-bottom: 80px
 		.wrapper-content
 			flex-wrap: nowrap
@@ -296,6 +446,9 @@
 @media only screen and (min-width : 480px)
 	/**/
 
+@media only screen and (min-width : 575px)
+	.hide-more-sm
+		display: none!important
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
@@ -305,12 +458,22 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	.container
+	.container,
+	.container-lg
 		max-width: 1310px
+	footer
+		.copyright
+			&.mob
+				display: none
 	/**/
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	/**/
-
+@media only screen and (min-width : 1600px)
+	.text-section.stick-img
+		margin: 0 auto
+		max-width: 1280px
+		.stick-img-block
+			left: initial
